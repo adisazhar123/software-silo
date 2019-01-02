@@ -119,9 +119,8 @@
     </div>
 
     <div class="technologies">
-      <!-- <v-container> -->
       <v-layout row wrap>
-        <v-flex md3>
+        <v-flex md4>
         <div class="tech">
           <v-tooltip bottom>
             <img slot="activator" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/LaravelLogo.png" alt="">
@@ -130,7 +129,7 @@
         </div>
       </v-flex>
 
-      <v-flex md3>
+      <v-flex md4>
       <div class="tech">
         <v-tooltip bottom>
           <img slot="activator" src="https://sailsjs.com/images/logos/sails-logo_ltBg_ltBlue.png" alt="" style="width: 150px">
@@ -139,7 +138,7 @@
       </div>
     </v-flex>
 
-    <v-flex md3>
+    <v-flex md4>
       <div class="tech">
         <v-tooltip bottom>
           <img slot="activator" src="https://cdn-images-1.medium.com/max/600/1*Z3QcBB__mvWCqood2fbiBQ.png" alt="" style="width: 150px">
@@ -148,7 +147,9 @@
       </div>
     </v-flex>
 
-    <v-flex md3>
+    </v-layout>
+    <v-layout row wrap>
+    <v-flex md4>
       <div class="tech">
         <v-tooltip bottom>
         <img slot="activator" src="https://dwglogo.com/wp-content/uploads/2017/12/1100px_Redis_Logo_01.png" alt="" style="width: 150px; margin-top: -20px;">
@@ -156,9 +157,24 @@
         </v-tooltip>
       </div>
     </v-flex>
-
+      <v-flex md4>
+        <div class="tech">
+          <v-tooltip bottom>
+            <img slot="activator" src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="">
+            <span>MySQL</span>
+          </v-tooltip>
+        </div>
+      </v-flex>
+      <v-flex md4>
+        <div class="tech">
+          <v-tooltip bottom>
+            <img slot="activator" src="http://pluspng.com/img-png/logo-mongodb-png-mongodb-logo-anything-but-the-simplest-of-web-applications-requires-a-database-to-store-and-serve-content-from-choosing-the-right-database-and-structuring-413.png" alt=""
+            style="margin-top:-30px">
+            <span>Mongo DB</span>
+          </v-tooltip>
+        </div>
+      </v-flex>
     </v-layout>
-  <!-- </v-container> -->
     </div>
 
   </div>

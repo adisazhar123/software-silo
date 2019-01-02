@@ -15,7 +15,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Raleway' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
     ]
   },
@@ -23,7 +23,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: 'blue' },
+  loading: { color: '#3fc7c3' },
 
   /*
   ** Global CSS
@@ -44,13 +44,34 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
   /*
   ** Axios module configuration
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    baseURL: 'http://localhost:1337/api'
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: 'login', method: 'post', propertyName: 'token' },
+          user: { url: 'user', method: 'get', propertyName: 'data' },
+          logout: false
+        },        
+        tokenRequired: true,
+        tokenType: 'bearer',
+        rewriteRedirects: false
+      }
+    },
+    redirect: {
+      login: '/login',
+      home: false
+    },        
   },
 
   /*
